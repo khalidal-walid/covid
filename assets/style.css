@@ -1,0 +1,57 @@
+body { 
+  margin: 0; 
+  background-color: #151A35; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.main-info {
+  display: flex;
+}
+
+.main-info > div {
+  background-color: #1B233F;
+  margin: 1em;
+  text-align: center;
+  flex-basis: 100%;
+  border-radius: 10px;
+}
+
+.info h1, .graph-1 h1, .graph-2 h1 {
+  color: aliceblue;
+  font-size: 1em;
+}
+
+.info p, .graph-1 p {
+  color: orange;
+  font-size: 1.3em;
+}
+
+.div-for-dropdown {
+  padding: 2em;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.main-graph {
+  display: flex;
+}
+
+.main-graph > div {
+  background-color: #1B233F;
+  margin: 1em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.graph-1 {
+  flex-basis: 25%;
+}
+
+.graph-2 {
+  flex-basis: 75%;
+}
