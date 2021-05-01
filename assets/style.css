@@ -1,7 +1,9 @@
 body { 
   margin: 0; 
+  padding: 0;
   background-color: #151A35; 
   font-family: Arial, Helvetica, sans-serif;
+  /* overflow: hidden; */
 }
 
 .title {
@@ -24,21 +26,29 @@ body {
 .info h1, .graph-1 h1, .graph-2 h1 {
   color: aliceblue;
   font-size: 1em;
+  margin: 1em;
 }
 
-.info p, .graph-1 p {
+.info h2 {
   color: orange;
   font-size: 1.3em;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.info p, .title p {
+  color: darkgray;
+  font-size: 0.7em;
+  font-weight: 700;
 }
 
 .div-for-dropdown {
-  padding: 2em;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 20em;
 }
 
 .main-graph {
   display: flex;
+  margin: 0.6em;
 }
 
 .main-graph > div {
@@ -46,6 +56,7 @@ body {
   margin: 1em;
   text-align: center;
   border-radius: 10px;
+  /* padding: 1em; */
 }
 
 .graph-1 {
@@ -54,4 +65,34 @@ body {
 
 .graph-2 {
   flex-basis: 75%;
+}
+
+.graph-1 p {
+  color: lightgray;
+  font-size: 0.8em;
+  text-align: left;
+  margin-left: 1em;
+  margin-top: 3em;
+  font-weight: 700;
+}
+
+#line-chart {
+  margin-top: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .main-info, .main-graph {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+  }
+
+  .div-for-dropdown {
+    padding: 0 4em;
+  }
 }
