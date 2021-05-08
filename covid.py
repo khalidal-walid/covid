@@ -8,8 +8,11 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
 # Import data 
-df = pd.read_csv("/Users/tengku/Desktop/Covid/covid-19 malaysia.csv")
-df2 = pd.read_csv("/Users/tengku/Desktop/Covid/covid-19 state.csv")
+# df = pd.read_csv("https://raw.githubusercontent.com/khalidal-walid/covid/main/covid-19%20malaysia.csv")
+# df2 = pd.read_csv("https://raw.githubusercontent.com/khalidal-walid/covid/main/covid-19%20state.csv")
+
+df = pd.read_csv("/Users/tengku/Project/Covid/covid-19 malaysia.csv")
+df2 = pd.read_csv("/Users/tengku/Project/Covid/covid-19 state.csv")
 
 # Creates a list of dictionaries
 def get_options(list_state):
@@ -62,21 +65,21 @@ app.layout = html.Div([
       html.H1(children='Statistik semasa'),
 
       html.P(f"Peratus sudah menerima dos pertama: {df['% 1st dose'].iloc[-1]}"),
-      dbc.Progress(value=9.5, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
+      dbc.Progress(value=10.69, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
 
       html.P(f"Peratus sudah menerima dos kedua: {df['% 2nd dose'].iloc[-1]}"),
       # dbc.Progress(children=["0.06%"], value=1, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}), 
-      dbc.Progress(value=5.87, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}), 
+      dbc.Progress(value=6.72, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}), 
 
       html.P(f"Peratus sembuh: {df['% discharged'].iloc[-1]}"),
-      dbc.Progress(value=92.43, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
+      dbc.Progress(value=91.58, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
 
       html.P(f"Peratus kematian: {df['% death'].iloc[-1]}"),
-      dbc.Progress(value=0.37, max=100, striped=True, color="danger", style={"height": "40px", 'margin': '1em'})      
+      dbc.Progress(value=0.38, max=100, striped=True, color="danger", style={"height": "40px", 'margin': '1em'})      
     ], className= 'graph-1'),
 
     html.Div([
-        html.H1(children='Kes mengikut negeri'),
+        html.H1(children='Kes mengikut negeri (Mei 2021)'),
               html.Div(
                 className='div-for-dropdown',
                 children=[
