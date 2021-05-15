@@ -65,17 +65,17 @@ app.layout = html.Div([
       html.H1(children='Statistik semasa'),
 
       html.P(f"Peratus sudah menerima dos pertama: {df['% 1st dose'].iloc[-1]}"),
-      dbc.Progress(value=10.69, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
+      dbc.Progress(value=11.68, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
 
       html.P(f"Peratus sudah menerima dos kedua: {df['% 2nd dose'].iloc[-1]}"),
       # dbc.Progress(children=["0.06%"], value=1, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}), 
-      dbc.Progress(value=6.72, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}), 
+      dbc.Progress(value=7.23, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}), 
 
       html.P(f"Peratus sembuh: {df['% discharged'].iloc[-1]}"),
-      dbc.Progress(value=91.58, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
+      dbc.Progress(value=90.63, max=100, striped=True, color="success", style={"height": "40px", 'margin': '1em'}),
 
       html.P(f"Peratus kematian: {df['% death'].iloc[-1]}"),
-      dbc.Progress(value=0.38, max=100, striped=True, color="danger", style={"height": "40px", 'margin': '1em'})      
+      dbc.Progress(value=0.39, max=100, striped=True, color="danger", style={"height": "40px", 'margin': '1em'})      
     ], className= 'graph-1'),
 
     html.Div([
@@ -134,4 +134,5 @@ def update_line_chart(state_selection):
 
 # Run the App
 if __name__ == '__main__':
-  app.run_server(debug=True)
+  # app.run_server(debug=True)
+  app.run_server()
